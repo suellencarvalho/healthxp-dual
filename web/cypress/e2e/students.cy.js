@@ -66,51 +66,42 @@ describe('alunos', () => {
     it('não deve cadastrar aluno menor de 16 anos', () => {
 
         const student = students.aluno_menor
-        // Dado que estou logado como Administrador da academia
-        cy.adminLogin()
-        // E que acessei o formulário de cadastro de alunos
-        studentPage.goToRegister()
-        // Quando tento cadastrar um aluno com idade igual ou menor a 16 anos
-        studentPage.submitForm(student)
 
-        // Então o sistema não permite o cadastro, exibindo uma mensagem de alerta no campo idade
+        cy.adminLogin()
+ 
+        studentPage.goToRegister()
+        studentPage.submitForm(student)
         studentPage.requiredMessage('Idade', 'A idade mínima para treinar é 16 anos!')
 
     })
 
-// Tentar cadastrar informando peso incorreto:
+
     it('não deve cadastrar com peso incorreto', () =>{
         const student = students.peso_zero
-        cy.task('deleteStudent', student.email)
-        // Dado que estou logado como Administrador da academia
-        cy.adminLogin()
-        // E que acessei o formulário de cadastro de alunos
-        studentPage.goToRegister()
-        // Quando tento cadastrar um aluno informando um peso menor ou igual a ZERO
-        studentPage.submitForm(student)
 
-        // Então o sistema não permite o cadastro, exibindo uma mensagem de alerta no campo idade
+        cy.task('deleteStudent', student.email)
+
+        cy.adminLogin()
+
+        studentPage.goToRegister()
+        studentPage.submitForm(student)
         studentPage.requiredMessage('Peso (em kg)', 'O peso é obrigatório')
+
     })
 
-    // Tentar cadastrar informando altura incorreta:
+
     it('não deve cadastrar com altura incorreta', () =>{
         const student = students.altura_zero
 
         cy.task('deleteStudent', student.email)
-        // Dado que estou logado como Administrador da academia
-        cy.adminLogin()
-        // E que acessei o formulário de cadastro de alunos
-        studentPage.goToRegister()
-        // Quando tento cadastrar um aluno informando um peso menor ou igual a ZERO
-        studentPage.submitForm(student)
 
-        // Então o sistema não permite o cadastro, exibindo uma mensagem de alerta no campo idade
+        cy.adminLogin()
+
+        studentPage.goToRegister()
+        studentPage.submitForm(student)
         studentPage.requiredMessage('Altura', 'Altura minima permitida 1.45' )
+
     })
-    // Dado que estou logado como Administrador da academia
-    // E que acessei o formulário de cadastro de alunos
-    // Quando tento cadastrar um aluno informando uma altura menor ou igual a ZERO
-    // Então o sistema não permite o cadastro, exibindo uma mensagem de alerta no campo altura
+
 
 })
