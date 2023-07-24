@@ -1,0 +1,33 @@
+{
+    "create":{
+        "name": "Jeremy Adams",
+        "email":"Jeremy@yahoo.com",
+        "age": "28",
+        "weight": "72",
+        "feet_tall": "1.70"
+    },
+
+    "duplicate":{
+        "name": "Suellen Adams",
+        "email":"suellen@susu.com",
+        "age": "32",
+        "weight": "70",
+        "feet_tall": "1.64"
+    },
+
+    "remove":{
+        "name": "Alexander McQueen",
+        "email":"Alexander@McQueen.com",
+        "age": "54",
+        "weight": "85",
+        "feet_tall": "1.84"
+    },
+
+    "required":{
+        "name": "",
+        "email":"",
+        "age": "",
+        "weight": "",
+        "feet_tall": ""
+    }
+}
