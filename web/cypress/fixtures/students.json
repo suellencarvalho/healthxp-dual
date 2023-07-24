@@ -29,5 +29,31 @@
         "age": "",
         "weight": "",
         "feet_tall": ""
+    },
+
+    "aluno_menor":{
+        "name": "Coco Channel",
+        "email":"Coco@Channel.com",
+        "age": "15",
+        "weight": "65",
+        "feet_tall": "1.54"
+    },
+
+    "peso_zero":{
+        "name": "Peso Leve",
+        "email":"Peso@levinho.com",
+        "age": "30",
+        "weight": "0",
+        "feet_tall": "1.64"
+    },
+
+    "altura_zero":{
+        "name": "José Pequeno",
+        "email":"Jose@pequeno.com.br",
+        "age": "30",
+        "weight": "50",
+        "feet_tall": "0"
     }
+
+
 }
