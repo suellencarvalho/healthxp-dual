@@ -1,0 +1,18 @@
+{
+    "create": {
+        "student": {
+            "name": "Emily Stone",
+            "email": "emily@hotmail.com",
+            "age": "29",
+            "weight": "72",
+            "feet_tall": "1.70"
+        },
+        "plan": {
+            "id": 2,
+            "name": "Premium",
+            "price": 99.99
+        },
+        "question": "Qual o melhor termogenico?"
+    }
+
+}

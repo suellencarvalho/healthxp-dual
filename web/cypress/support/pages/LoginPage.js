@@ -7,22 +7,16 @@ class LoginPage {
     }
     
     go(){
-        cy.visit('http://localhost:3000')
+        cy.visit('/')
     }
 
     fill(user){
 
-        if(user.email){
-            cy.get('input[name=email]')
-                .clear()
-                .type(user.email)
-        }
-       
-        if(user.password){
-            cy.get('input[name=password]')
-                .clear()
-                .type(user.password)
-        }
+        cy.get('input[name=email]').clear().as('email')
+        cy.get('input[name=password]').clear().as('password')
+
+        user.email ? cy.get('@email').type(user.email) : cy.log('empty email')
+        user.password ? cy.get('@password').type(user.password): cy.log('empty password')
     
     }
 

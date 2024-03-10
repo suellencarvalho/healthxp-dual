@@ -47,6 +47,8 @@ describe('login', () => {
             loginPage.fill(u)
             loginPage.submit()
 
+            cy.wait(1000)
+
             loginPage.popup.content()
                 .invoke('text')
                 .then((t) => {

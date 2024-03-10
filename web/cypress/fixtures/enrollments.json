@@ -1,0 +1,30 @@
+{
+    "create": {
+        "student": {
+            "name": "John Doe",
+            "email": "johndoe@gmail.com",
+            "age": "28",
+            "weight": "72",
+            "feet_tall": "1.70"
+        },
+        "plan": {
+            "id": 1,
+            "name": "Health",
+            "price": 99.99
+        }
+    },
+    "duplicate": {
+        "student": {
+            "name": "Jean Smith",
+            "email": "Anabelle9@hotmail.com",
+            "age": "28",
+            "weight": "72",
+            "feet_tall": "1.70"
+        },
+        "plan": {
+            "id": 1,
+            "name": "Health",
+            "price": 99.99
+        }
+    }
+}

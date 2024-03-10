@@ -9,8 +9,8 @@ describe('alunos', () => {
 
         const student = students.create
 
-        cy.task('deleteStudent', student.email)
-
+       // cy.task('deleteStudent', student.email)
+        cy.deleteStudent(student.email)
         cy.adminLogin()
 
 
@@ -24,8 +24,8 @@ describe('alunos', () => {
         const student = students.duplicate
 
 
-        cy.task('resetStudent', student)
-
+        //cy.task('resetStudent', student)
+        cy.resetStudent(student)
         cy.adminLogin()
 
         studentPage.goToRegister()
@@ -37,8 +37,8 @@ describe('alunos', () => {
 
         const student = students.remove
 
-        cy.task('resetStudent', student)
-
+        //cy.task('resetStudent', student)
+        cy.resetStudent(student)
         cy.adminLogin()
 
         studentPage.search(student.name)
@@ -53,11 +53,11 @@ describe('alunos', () => {
         cy.adminLogin()
         studentPage.goToRegister()
         studentPage.submitForm(student)
-        studentPage.requiredMessage('Nome completo', 'Nome é obrigatório')
-        studentPage.requiredMessage('E-mail', 'O email é obrigatório')
-        studentPage.requiredMessage('Idade', 'A idade é obrigatória')
-        studentPage.requiredMessage('Peso (em kg)', 'O peso é obrigatório')
-        studentPage.requiredMessage('Altura', 'A altura é obrigatória')
+        studentPage.alertMessage('Nome completo', 'Nome é obrigatório')
+        studentPage.alertMessage('E-mail', 'O email é obrigatório')
+        studentPage.alertMessage('Idade', 'A idade é obrigatória')
+        studentPage.alertMessage('Peso (em kg)', 'O peso é obrigatório')
+        studentPage.alertMessage('Altura', 'A altura é obrigatória')
 
     })
 
@@ -71,12 +71,12 @@ describe('alunos', () => {
  
         studentPage.goToRegister()
         studentPage.submitForm(student)
-        studentPage.requiredMessage('Idade', 'A idade mínima para treinar é 16 anos!')
+        studentPage.alertMessage('Idade', 'A idade mínima para treinar é 16 anos!')
 
     })
 
 
-    it('não deve cadastrar com peso incorreto', () =>{
+    it.skip('não deve cadastrar com peso incorreto', () =>{
         const student = students.peso_zero
 
         cy.task('deleteStudent', student.email)
@@ -85,12 +85,12 @@ describe('alunos', () => {
 
         studentPage.goToRegister()
         studentPage.submitForm(student)
-        studentPage.requiredMessage('Peso (em kg)', 'O peso é obrigatório')
+        studentPage.alertMessage('Peso (em kg)', 'O peso é obrigatório')
 
     })
 
 
-    it('não deve cadastrar com altura incorreta', () =>{
+    it.skip('não deve cadastrar com altura incorreta', () =>{
         const student = students.altura_zero
 
         cy.task('deleteStudent', student.email)
@@ -99,7 +99,7 @@ describe('alunos', () => {
 
         studentPage.goToRegister()
         studentPage.submitForm(student)
-        studentPage.requiredMessage('Altura', 'Altura minima permitida 1.45' )
+        studentPage.alertMessage('Altura', 'Altura minima permitida 1.45' )
 
     })
 

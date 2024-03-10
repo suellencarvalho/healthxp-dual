@@ -27,7 +27,7 @@ class StudentPage{
 
     }
 
-    requiredMessage(label, text){
+    alertMessage(label, text){
         cy.contains('label', label)
         .parent()
         .find('span')
