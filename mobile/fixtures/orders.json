@@ -1,0 +1,18 @@
+{
+    "help": {
+        "student": {
+            "name": "Amelia Churrasquinho",
+            "email": "AmeliaChurras@hotmail.com",
+            "age": "2924",
+            "weight": "7652",
+            "feet_tall": "1.70"
+        },
+        "plan": {
+            "id": 2,
+            "name": "Premium",
+            "price": 99.99
+        },
+        "question": "Qual o melhor termogenico?"
+    }
+
+}

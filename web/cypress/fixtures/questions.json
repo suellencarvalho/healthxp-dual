@@ -1,5 +1,5 @@
 {
-    "create": {
+    "notification": {
         "student": {
             "name": "Emily Stone",
             "email": "emily@hotmail.com",
@@ -13,6 +13,24 @@
             "price": 99.99
         },
         "question": "Qual o melhor termogenico?"
+    },
+
+    "prof_answer":{
+        "student": {
+            "name": "Raul Padilha",
+            "email": "raul@gmail.com",
+            "age": "29",
+            "weight": "72",
+            "feet_tall": "1.80"
+        },
+        "plan": {
+            "id": 2,
+            "name": "Premium",
+            "price": 99.99
+        },
+        "question": "Como ganhar massa magra?",
+        "answer": "Comer bastante preoteína."
+
     }
 
 }

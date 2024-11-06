@@ -11,6 +11,11 @@ class Navbar {
         cy.get('a[href="/enrollments"]')
             .click()
     }
+
+    openNotifications(){
+        cy.get('.notifications button').click({force: true}, {timeout: 10000})
+
+    }
 }
 
 export default new Navbar()

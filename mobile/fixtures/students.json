@@ -1,0 +1,32 @@
+{
+    "sucess_login":{
+        "student": {
+            "name": "Josefa Almeida",
+            "email": "jojoalmeida@gmail.com",
+            "age": "28",
+            "weight": "72",
+            "feet_tall": "1.70"
+        },
+        "plan": {
+            "id": 2,
+            "name": "Premium",
+            "price": 99.99
+        }
+    },
+
+    "not_login" :{
+        "student": {
+            "name": "Joana Almeida",
+            "email": "joanaalmeida@gmail.com",
+            "age": "2",
+            "weight": "79",
+            "feet_tall": "1.65"
+        },
+        "plan": {
+            "id": 1,
+            "name": "Health",
+            "price": 99.99
+        }
+    }
+    
+}
